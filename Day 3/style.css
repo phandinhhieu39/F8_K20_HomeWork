@@ -1,15 +1,201 @@
-.box-3 ~ .box{
-    color : green;
-    
+/* Bài 1: Combinators */
+.main-nav a{
+    color: #1d4ed8;
+
 }
-.box-3 li:nth-child(even){
-    color :red ;
+.main-nav > ul > li {
+  background-color: #f1f5f9;
+}
+h2 + p {
+    color:#64748b;
+}
+h2 ~ p {
+    color:#0f172a;
+}
+.author a{
+    color:#f97316;
 }
 
-.box-3 li:nth-child(5){
-    color :violet ;
-}
-.box-3 ul ul{
-    color :gray ;
+/* Bài 2: CSS Nesting */
+
+.post {
+    background: white;
+
+& .post-title{
+ color:#0f172a;
 }
 
+&:hover {
+    background: #f8fafc;
+}
+
+&.featured{
+    background:#ffff31;
+}
+
+&:hover .post-title {
+    color:#2563eb;
+}
+}
+
+/* Bài 3: Interactive Pseudo-classes */
+/* 1. Link trong nội dung bài viết:
+Chưa truy cập: màu #2563eb
+Đã truy cập: màu #9333ea
+Khi di chuột: màu #1e40af
+Khi đang nhấn: màu #1e3a8a */
+.post-content a:link {
+    color:#2563eb;
+
+&:visited {
+    color: #9333ea;
+}
+
+&:hover {
+   color: #1e40af;
+}
+
+&:active {
+   color: #1e3a8a;
+}
+}
+
+/* 2. Các nút bấm:
+
+Nút chính có nền #2563eb, chữ white
+Khi di chuột vào nút: nền #3b82f6
+Khi nhấn nút: nền #1d4ed8
+Nút bị vô hiệu hóa: nền #94a3b8, chữ #cbd5e1 */
+
+button {
+    background: #2563eb;
+    color: white;
+
+&:hover {
+    background: #3b82f6;
+}
+
+&:active {
+    background: #1d4ed8;
+}
+
+&:disabled {
+    background:#94a3b8;
+    color: #cbd5e1;
+}
+}
+
+/* 3. Ô nhập liệu khi được focus có nền #eff6ff */
+input:focus {
+    background: #eff6ff;
+}
+
+/* Bài 4: Structural Pseudo-classes
+Trong bảng so sánh:
+Các hàng lẻ có nền #f8fafc
+Các hàng chẵn có nền white
+Hàng đầu tiên (tiêu đề bảng) có nền #0f172a, chữ white
+Hàng cuối cùng có nền #dbeafe */
+
+.comparison-table {
+    tr:nth-child(odd){
+    background:#f8fafc;
+}
+& tr:nth-child(even) {
+    background: white;
+}
+& thead tr:first-child {
+    background: #0f172a;
+    color:white;
+}
+& tr:last-child {
+    background:#dbeafe;
+}
+}
+
+/* 2. Trong danh sách các bước:
+Bước đầu tiên có màu #16a34a
+Bước cuối cùng có màu #dc2626
+Bước thứ 3 có nền #fef3c7 */
+
+.steps li:first-child {
+    color: #16a34a; 
+}
+.steps li:last-child {
+    color:#dc2626;
+}
+.steps li:nth-child(3) {
+    color: #fef3c7
+}
+
+/* 3.Các widget trong sidebar (trừ widget cuối) có nền white */
+
+.sidebar .widget:not(:last-child){
+    background: #fef3c7;
+}
+
+/* Bài 5: Pseudo-elements
+1. Đoạn văn mở đầu:
+
+Dòng đầu tiên có màu #0f172a
+Chữ cái đầu tiên có màu #2563eb
+
+2. Khối trích dẫn thêm dấu ngoặc kép " màu #cbd5e1 ở đầu (dùng ::before với content)
+3. Danh sách các bước có ký hiệu đầu dòng màu #2563eb (dùng ::marker)
+4. Khi bôi đen text, nền chuyển sang #bfdbfe, chữ #0f172a (dùng ::selection)
+5. Badge thêm chấm tròn màu #ef4444 ở đầu (dùng ::before với content: "") */
+
+.lead::first-line {
+    color:#0f172a;
+}
+.lead::first-letter {
+    color:#2563eb;
+}
+
+.quote::before {
+    content: '"';
+    color: #cbd5e1
+}
+.steps li::marker {
+  color: #2563eb;
+}
+::selection {
+    background:#bfdbfe;
+    color:#2a250f;
+}
+.badge::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: #ef4444;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+/* Bài 6: Attribute Selectors
+Ô nhập bắt buộc (required) có nền #fffbeb
+Link bắt đầu bằng "https://" có màu #2563eb
+Link tải file PDF có màu #ea580c
+Nút có class chứa từ "btn" có nền #e2e8f0
+Phần tử có thuộc tính lang bắt đầu bằng "vi" có màu #0f172a
+Hàng trong bảng có độ ưu tiên cao (data-priority="high") có nền #fee2e2 */
+
+input[required]{
+    background: #fffbeb;
+}
+a[href^="https://"]{
+    color: #2563eb;
+}
+a[href$=".pdf"]{
+    color:#ea580c;
+}
+[class*="btn"]{
+    background:#e2e8f0;
+}
+[lang|=vi]{
+    color:#0f172a;
+}
+tr[data-priority="high"] {
+  background: #fee2e2;
+}
