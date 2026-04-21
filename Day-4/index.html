@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Day 4</title>
+        <style>
+            body {
+                margin: 20px;
+            }
+
+            .header {
+                background: orange;
+                color: white;
+                padding: 10px;
+                margin: 10px;
+                font-size: 20px;
+                font-weight: bold;
+            }
+            label {
+                margin: 5px;
+            }
+            .option {
+                padding: 20px;
+            }
+            .Hl {
+                padding: 10px 15px;
+                margin-top: 10px;
+            }
+            .Light,
+            .Dark,
+            .Red,
+            .Blue,
+            .Green,
+            .VI,
+            .EN,
+            .advanced,
+            .eco,
+            .warn {
+                background: #f5f5f5;
+                color: gray;
+            }
+            /* chọn Light  */
+            #Light:checked + label {
+                background: rgb(251, 251, 170);
+                color: brown;
+                font-weight: bold;
+            }
+            #Light:checked ~ .highlight .Light {
+                background: rgb(251, 251, 170);
+                color: brown;
+            }
+            #Light:checked ~ .highlight .Dark {
+                background: #f5f5f5;
+                color: gray;
+            }
+            /* Chọn Dark  */
+            #Dark:checked + label {
+                background: rgb(97, 97, 77);
+                color: rgb(255, 255, 143);
+                font-weight: bold;
+            }
+            #Dark:checked ~ .highlight .Dark {
+                background: rgb(97, 97, 77);
+                color: rgb(255, 255, 143);
+            }
+            #Dark:checked ~ .highlight .Light {
+                background: #f5f5f5;
+                color: gray;
+            }
+
+            /* Chọn màu chủ đạo */
+            #Red:checked + label {
+                background: rgb(254, 198, 198);
+                color: red;
+            }
+            #Red:checked ~ .highlight .Red {
+                background: rgb(254, 198, 198);
+                color: red;
+            }
+
+            #Blue:checked + label {
+                background: rgb(180, 180, 239);
+                color: blue;
+            }
+            #Blue:checked ~ .highlight .Blue {
+                background: rgb(180, 180, 239);
+                color: blue;
+            }
+
+            #Green:checked + label {
+                background: rgb(187, 251, 187);
+                color: green;
+            }
+            #Green:checked ~ .highlight .Green {
+                background: rgb(187, 251, 187);
+                color: green;
+            }
+
+            #VI:checked + label {
+                background: rgb(187, 251, 187);
+                color: green;
+            }
+            #VI:checked ~ .highlight .VI {
+                color: green;
+                font-size: 25px;
+                font-weight: bold;
+            }
+            #EN:checked + label {
+                background: rgb(180, 180, 239);
+                color: blue;
+            }
+            #EN:checked ~ .highlight .EN {
+                font-size: 25px;
+                font-weight: bold;
+                color: blue;
+            }
+
+            #advanced:checked + label {
+                background: rgb(243, 243, 161);
+                color: brown;
+            }
+            #advanced:checked ~ .highlight .advanced {
+                background: rgb(243, 243, 161);
+                color: brown;
+            }
+
+            #eco:checked + label {
+                background: rgb(164, 244, 160);
+                color: green;
+            }
+            #eco:checked ~ .highlight .eco {
+                background: rgb(164, 244, 160);
+                color: green;
+            }
+
+            #warn:checked + label {
+                background: rgb(244, 173, 160);
+                color: red;
+            }
+            #warn:checked ~ .highlight .warn {
+                background: rgb(244, 173, 160);
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">Trung tâm cấu hình giao diện (Demo)</div>
+        <label>Chọn giao diện (Theme)</label> <br />
+        <!-- Light  -->
+        <input type="radio" id="Light" name="Theme" value="Light" checked />
+        <label for="Light">light</label>
+
+        <!-- Dark  -->
+        <input type="radio" id="Dark" name="Theme" value="Dark" />
+        <label for="Dark">Dark</label> <br />
+
+        <label>Chọn màu chủ đạo (Color)</label><br />
+        <input type="radio" id="Red" name="Color" value="Red" checked />
+        <label for="Red">Red</label>
+        <input type="radio" id="Blue" name="Color" value="Blue" />
+        <label for="Blue">Blue</label>
+        <input type="radio" id="Green" name="Color" value="Green" />
+        <label for="Green">Green</label><br />
+
+        <label>Chọn ngôn ngữ (Language)</label> <br />
+        <input type="radio" id="VI" name="Language" value="VI" checked />
+        <label for="VI">VI</label>
+        <input type="radio" id="EN" name="Language" value="EN" />
+        <label for="EN">EN</label> <br />
+
+        <label>Tùy chọn bổ sung (Option-checkbox)</label><br />
+        <input
+            type="checkbox"
+            id="advanced"
+            name="Option-checkbox"
+            value="advanced"
+        />
+        <label for="advanced">Hiển thị mô tả nâng cao</label>
+        <input type="checkbox" id="eco" name="Option-checkbox" value="eco" />
+        <label for="eco">Bật chế độ Eco</label>
+        <input type="checkbox" id="warn" name="Option-checkbox" value="warn" />
+        <label for="warn">Hiển thị cảnh báo quan trọng</label>
+
+        <div class="highlight">
+            <div class="Hl Light">Theme Light: Giao diện sáng, chữ đen.</div>
+            <div class="Hl Dark">Theme Dark: Giao diện tối, chữ sáng.</div>
+            <div class="Hl Red">Màu Red: được nhấn mạnh khi chọn Red.</div>
+            <div class="Hl Blue">Màu Blue: được nhấn mạnh khi chọn Blue.</div>
+            <div class="Hl Green">
+                Màu Green: được nhấn mạnh khi chọn Green.
+            </div>
+            <div class="Hl VI">
+                [VI] Xin chào bạn! Khi chọn VI, dòng này rõ hơn.
+            </div>
+            <div class="Hl EN">
+                [EN] Hello, world! Khi chọn EN, dòng này rõ hơn.
+            </div>
+            <div class="Hl advanced">
+                Mô tả nâng cao: giải thích kỹ hơn về cách các lựa chọn đang ảnh
+                hưởng giao diện.
+            </div>
+            <div class="Hl eco">
+                Chế độ Eco: mô phỏng trạng thái tiết kiệm tài nguyên cho giao
+                diện.
+            </div>
+            <div class="Hl warn">
+                Cảnh báo quan trọng: khu vực dùng để nhấn mạnh thông tin hệ
+                thống.
+            </div>
+        </div>
+    </body>
+</html>
