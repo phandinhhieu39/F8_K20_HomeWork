@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Day 5</title>
+        <style>
+            * {
+                margin: 0px;
+                padding: 0px;
+            }
+            h1 {
+                font-size: 30px;
+                margin: 4px;
+            }
+            p {
+                font-size: 8px;
+            }
+            ul {
+                list-style: none;
+            }
+            li {
+                margin: 10px;
+                display: inline-block;
+            }
+            .square {
+                /* position: relative; */
+                border: 2px solid red;
+                width: 50px;
+                height: 50px;
+                background-color: transparent;
+            }
+
+            .rectangle {
+                /* display:inline-block; */
+                border: 2px solid blue;
+                width: 100px;
+                height: 50px;
+                background-color: transparent;
+                left: 70px;
+            }
+
+            .triangle-up {
+                border-width: 30px;
+                border-color: transparent transparent blue transparent;
+                border-style: solid;
+                width: 0;
+            }
+
+            .triangle-down {
+                border-width: 30px;
+                border-color: orange transparent transparent transparent;
+                border-style: solid;
+                width: 0;
+            }
+
+            .triangle-left {
+                border-width: 30px;
+                border-color: transparent violet transparent transparent;
+                border-style: solid;
+                width: 0;
+            }
+
+            .triangle-right {
+                border-width: 30px;
+                border-color: transparent transparent transparent
+                    rgb(247, 237, 91);
+                border-style: solid;
+                width: 0;
+            }
+
+            .trapsium {
+                border-width: 30px;
+                border-color: transparent transparent rgb(132, 132, 251)
+                    transparent;
+                border-style: solid;
+                width: 50px;
+            }
+
+            .wide-triangle {
+                width: 0;
+                border-left: 80px solid transparent;
+                border-right: 80px solid transparent;
+                border-bottom: 40px solid pink;
+            }
+
+            .acute-triangle {
+                width: 0;
+                border-left: 10px solid transparent;
+                border-right: 10px solid transparent;
+                border-bottom: 40px solid pink;
+            }
+
+            .isosceles-triangle {
+                border-width: 30px;
+                border-color: transparent transparent brown transparent;
+                border-style: solid;
+                width: 0;
+            }
+
+            .right-arrow {
+                border-width: 30px;
+                border-color: transparent transparent transparent
+                    rgb(76, 210, 250);
+                border-style: solid;
+                width: 0;
+            }
+
+            .left-arrow {
+                border-width: 30px;
+                border-color: transparent rgb(238, 42, 238) transparent
+                    transparent;
+                border-style: solid;
+                width: 0;
+            }
+
+            .ribbon {
+                border-width: 30px;
+                border-color: red transparent red red;
+                border-style: solid;
+                width: 0;
+            }
+
+            img {
+                width: 60px;
+                height: 60px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Các hình có thể tạo với border</h1>
+        <ul>
+            <li>
+                <div class="square"></div>
+                <p>1. Hình vuông</p>
+            </li>
+            <li>
+                <div class="rectangle"></div>
+                <p>2. Hình chữ nhật</p>
+            </li>
+            <li>
+                <div class="triangle-up"></div>
+                <p>3. Tam giác lên</p>
+            </li>
+            <li>
+                <div class="triangle-down"></div>
+                <p>4. Tam giác xuống</p>
+            </li>
+            <li>
+                <div class="triangle-left"></div>
+                <p>5. Tam giác trái</p>
+            </li>
+            <li>
+                <div class="triangle-right"></div>
+                <p>6. Tam giác phải</p>
+            </li>
+            <li>
+                <div class="trapsium"></div>
+                <p>7. Hinh thang</p>
+            </li>
+            <li>
+                <div class="wide-triangle"></div>
+                <p>8. Tam giác rộng</p>
+            </li>
+            <li>
+                <div class="acute-triangle"></div>
+                <p>9. Tam giác nhọn</p>
+            </li>
+            <li>
+                <div class="isosceles-triangle"></div>
+                <p>10. Tam giác cân</p>
+            </li>
+            <li>
+                <div class="right-arrow"></div>
+                <p>11. Mũi tên phải</p>
+            </li>
+            <li>
+                <div class="left-arrow"></div>
+                <p>12. Mũi tên trái</p>
+            </li>
+            <li>
+                <div class="ribbon"></div>
+                <p>13. ribbon lá cờ</p>
+            </li>
+            <li>
+                <img
+                    src="https://files.fullstack.edu.vn/f8-prod/organization-logos/694743c405102.png"
+                    alt="logo"
+                />
+                <p>14. f8</p>
+            </li>
+        </ul>
+    </body>
+</html>
