@@ -1,0 +1,36 @@
+Tran Xuan Bang
+1998
+backend - k20
+K61 Bach Khoa
+
+Html
+    tinh chat:
+        inline
+        block
+    cau tao:
+        the du
+        the rong
+
+inline: nam tren 1 hang
+block: xuong dong -> width chiem viewport
+
+-> span -> chuyen sang block
+
+
+display: <value>
+    - inline
+    - block
+    - inline-block
+    - flex
+    - grid
+    - none
+
+
+- relative
+    green dang chong len the blue
+    roi khoi vi tri ban dau (xuong duoi 30px & sang phai 50px)
+    the blue ko thay doi vi tri
+- absolute
+    green dang chong len the blue
+    roi khoi vi tri ban dau (xuong duoi 30px & sang phai 50px theo the body)
+    the blue thay doi vi tri
