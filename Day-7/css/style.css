@@ -1,6 +1,6 @@
 .container1 {
     display:flex;
-    width:600;
+    width:600px;
     height:200px;
     justify-content: space-between;
     align-items: center;
@@ -16,7 +16,7 @@
 
 .container2 {
     display:flex;
-    width:600;
+    width:600px;
     height:200px;
     justify-content: space-between;
     align-items: center;
@@ -33,7 +33,7 @@
 
 .container3 {
     display:flex;
-    width:600;
+    width:600px;
     height:200px;
     flex-direction: column ;
     align-items: center;
@@ -63,7 +63,7 @@
 
 .container4 {
     display:flex;
-    width:600;
+    width:600px;
     height:200px;
     flex-direction: row;
     align-items: center;
@@ -96,7 +96,7 @@
 
 .container5 {
     display:flex;
-    width:600;
+    width:600px;
     height:200px;
     flex-direction: column-reverse;
     justify-content: center;
@@ -114,7 +114,7 @@
 
 .container6 {
     display:flex;
-    width:600;
+    width:600px;
     height:200px;
     flex-direction: row;
     justify-content: space-between;
@@ -130,7 +130,7 @@
 
 .container7 {
     display:flex;
-    width:600;
+    width:600px;
     height:200px;
     flex-direction: column;
     align-items: center;
@@ -161,7 +161,7 @@
 
 .container8 {
     display:flex;
-    width:600;
+    width:600px;
     height:200px;
     flex-direction: row;
     justify-content: space-between;
@@ -211,45 +211,6 @@
     }
 }
 
-/* .container10 {
-    display:flex;
-    width:600px;
-    height:200px;
-    flex-wrap: wrap;
-    border: 1px solid red;
-
-    item {
-        display: flex;
-        width:60px;
-        height:60px;
-        background:violet;
-        align-items: center;
-        justify-content: center;
-        border: 1px solid rgb(241, 189, 241);
-    }
-
-    .item1 {
-        width:60px;
-        height:60px;
-        background:violet;
-        align-items: center;
-        justify-content: center;
-        border: 1px solid rgb(241, 189, 241);
-    }
-    .item2 {
-        display:flex;
-        width:60px;
-        height:60px;
-        background:violet;
-        border: 1px solid rgb(241, 189, 241);
-    }
-    .item3 {
-        width:60px;
-        height:60px;
-        background:violet;
-        border: 1px solid rgb(241, 189, 241);
-    }
-} */
 
 .container10 {
   width: 600px;
