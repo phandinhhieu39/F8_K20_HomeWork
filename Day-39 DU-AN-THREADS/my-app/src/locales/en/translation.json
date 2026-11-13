@@ -1,0 +1,16 @@
+{
+  "common": {
+    "home": "Home",
+    "search": "Search",
+    "activity": "Activity",
+    "profile": "Profile",
+    "login": "Log in",
+    "register": "Sign up",
+    "logout": "Log out",
+    "post": "Post",
+    "whats_new": "What's new?",
+    "for_you": "For you",
+    "following": "Following",
+    "ghost_posts": "Ghost posts"
+  }
+}

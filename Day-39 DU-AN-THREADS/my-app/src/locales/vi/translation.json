@@ -1,0 +1,16 @@
+{
+  "common": {
+    "home": "Trang chủ",
+    "search": "Tìm kiếm",
+    "activity": "Hoạt động",
+    "profile": "Trang cá nhân",
+    "login": "Đăng nhập",
+    "register": "Đăng ký",
+    "logout": "Đăng xuất",
+    "post": "Đăng",
+    "whats_new": "Có gì mới?",
+    "for_you": "Dành cho bạn",
+    "following": "Đang theo dõi",
+    "ghost_posts": "Bài viết tự huỷ"
+  }
+}
